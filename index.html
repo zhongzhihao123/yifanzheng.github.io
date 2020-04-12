@@ -214,6 +214,140 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yifanstar.top/2020/04/11/code-summary/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="yifanzheng">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Star's Tech Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/11/code-summary/" class="post-title-link" itemprop="url">程序员日常开发注意事项总结</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-11 22:28:43" itemprop="dateCreated datePublished" datetime="2020-04-11T22:28:43+08:00">2020-04-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-12 18:41:24" itemprop="dateModified" datetime="2020-04-12T18:41:24+08:00">2020-04-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%85%B6%E4%BB%96/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/04/11/code-summary/" class="post-meta-item leancloud_visitors" data-flag-title="程序员日常开发注意事项总结" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/04/11/code-summary/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/11/code-summary/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>作为一名刚入行不久的菜鸟 Java 程序员，经常被自己的一些不好的开发习惯给坑，导致明明运行好好的项目突然出现意想不到的 Bug。然后，我就被导师叫过去进行了一番细心的指导，这里要特别感谢一下我的导师，可以说他是我目前开发路上的指路明灯。</p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>这里，我总结了几条开发中我认为比较重要的注意事项：</p>
+<p><strong>1. 完善代码注释</strong></p>
+<p>我相信很多小伙伴跟我一样，自己写的代码过一段时间去看就不知道是怎么回事了，而且经常发出疑问，“咦，这是我写的代码吗”。所以，注释是一个很好的东西，它不仅可以帮助我们理解程序中的每一行代码在做什么，而且可以降低代码的维护成本。</p>
+<p>但是，注释也不能随随便便的写，任何地方都写。这样会让代码显得冗余繁杂，反而降低了代码的可读性和维护性。</p>
+<p>我们在写注释时要讲究简明扼要，突出含义。对于类的注释，要表明类的功能和副作用（即使用该类时会不会出现一些异常等）；对于方法的注释，要表明方法是干什么的，每个参数的含义以及方法的副作用。</p>
+<p><strong>2. 完善单元测试</strong></p>
+<p>单元测试可以帮助我们发现程序中一些的 Bug，提升代码质量，提高开发效率。</p>
+<p>很多小伙伴应该和我一样也会时不时偷懒，没有去写单元测试，觉得很麻烦。但是，我在导师的督促下也补上了单元测试，后来我每次改了 Bug 后都用单元测试跑一下，就检查出了问题，比之前自己人工测试要快的多。突然就发现了单元测试的好处，虽然前期写单元测试有点麻烦，但是后期的收益是杠杠的，真香。</p>
+<p><strong>3. 过时的方法代码不要急着删除</strong></p>
+<p>在项目迭代中，我们会不断重构一些之前写的不是很好的方法。但是，过时的方法不应该马上删除，而是应该等重构的新方法上线运行一段时间，没有出现异常后才将过时的方法删除。</p>
+<p>为什么要这样做呢？因为我们并不能保证重构的新方法上线后一定能稳定运行。如果上线后新方法在运行的过程中出现 Bug，并且影响了用户的部分操作。那么，过时的方法就可以作为一种应急的替代方法，将新方法换下来，以保证用户正常操作。之后，我们再进行新方法的 Bug 排查与修复。</p>
+<p><strong>4. 项目的 API 只能增加不能删除</strong></p>
+<p>在前后端分离的项目中，当需要修改项目 API 地址时，应该是在旧的 API 地址上再添加新的 API 地址，旧的 API 地址应保留至项目迭代几个版本后，没有出现问题才进行删除。</p>
+<p>为什么要这样做呢？因为随着时间的推移，我们可能并不清楚到底有多少地方调用了旧的 API 地址。所以，当我们用新的 API 地址替换旧的 API 地址时，并不能保证所有的地方都完成替换了或者在替换时因为一些其他因素而漏掉了一些。如果此时就把旧的 API 地址删除了，那么上线后会存在很多风险。  </p>
+<p>比较好的做法就是让旧的 API 地址随着项目一起迭代几个版本后才删除，这样我们有足够的时间去发现遗漏的地方，减小项目上线出现的风险。</p>
+<p><strong>5. 请新建一个项目分支来修复 Bug</strong></p>
+<p>当项目出现 Bug 需要进行修复时，应该从当前版本分支（确保此分支没有进行任何更改）上新开一个新分支来进行 Bug 修复，最后再合并回原分支上。</p>
+<p><strong>6. 新建一个项目分支来完成项目新需求开发</strong></p>
+<p>当项目有新需求要进行开发时，应该在 Git 上新建一个项目分支来完成新需求的开发，并将分支命名成 <code>version_版本号_需求名</code> 这种形式。</p>
+<p>为什么不直接在当前版本分支上开发呢？如果我们在当前版本分支上进行开发，当项目出现 Bug 需要马上修复并上线时，而当前版本分支上还有我们没有开发完的新需求，根本不具备重新上线的条件了。此时，只有重新从远程仓库将当前版本的内容下载到本地，再进行 Bug 修复。这样反而很影响我们的开发效率。</p>
+<p>当我们在新分支上完成新需求开发时，应该先将当前版本分支合并到新分支上进行测试，没有问题后再合并到当前版本分支上。</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>在日常的开发中，养成良好的开发习惯不仅可以帮助我们提高开发效率，还可以降低开发过程中出现的一些不必要的失误与错误，间接地也改善了我们的代码质量。</p>
+<p>所以，小伙伴们一定要养成良好的开发习惯哟，一起加油！欢迎补充。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yifanstar.top/2020/03/09/angular-directive/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -360,7 +494,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-09 17:23:32 / 修改时间：17:55:54" itemprop="dateCreated datePublished" datetime="2020-03-09T17:23:32+08:00">2020-03-09</time>
+              <time title="创建时间：2020-03-09 17:23:32 / 修改时间：17:59:11" itemprop="dateCreated datePublished" datetime="2020-03-09T17:23:32+08:00">2020-03-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1470,124 +1604,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yifanstar.top/2019/12/09/builder-pattern/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="yifanzheng">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Star's Tech Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/09/builder-pattern/" class="post-title-link" itemprop="url">建造者模式</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-12-09 22:57:19" itemprop="dateCreated datePublished" datetime="2019-12-09T22:57:19+08:00">2019-12-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-05 14:10:06" itemprop="dateModified" datetime="2020-01-05T14:10:06+08:00">2020-01-05</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url" rel="index">
-                    <span itemprop="name">Java 设计模式</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span id="/2019/12/09/builder-pattern/" class="post-meta-item leancloud_visitors" data-flag-title="建造者模式" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2019/12/09/builder-pattern/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/12/09/builder-pattern/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>6.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>建造者模式（Builder），又叫生成器模式，是一种对象构建模式。它将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。<br>建造者模式可以将一个产品的内部表象和产品的生成过程分割开来，从而可以使一个建造过程生成具有不同的内部表象的产品对象。如果我们用了建造者模式，那么用户就只需指定需要建造的类型就可以得到它们，而具体建造的过程和细节就不需要知道了。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/12/09/builder-pattern/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1638,14 +1654,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
@@ -1701,13 +1717,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">135k</span>
+    <span title="站点总字数">137k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:03</span>
+    <span title="站点阅读时长">2:04</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动
   </div>
