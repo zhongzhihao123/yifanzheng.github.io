@@ -115,6 +115,9 @@
 
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>MySQL 官网：<a href="https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/" target="_blank" rel="noopener">https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/</a></p>
 ]]></content>
+      <categories>
+        <category>系统安装</category>
+      </categories>
   </entry>
   <entry>
     <title>volatile 关键字，你真的理解吗？</title>
@@ -210,7 +213,7 @@
 <p>那么，让我们继续往下探索， volatile 是如何禁止指令重排序的呢？这里我们将引出一个概念：<code>内存屏障指令</code></p>
 <p><strong>内存屏障指令</strong></p>
 <p>为了实现 volatile 内存语义（即内存可见性），JMM 会限制特定类型的编译器和处理器重排序。为此，JMM 针对编译器制定了 volatile 重排序规则表，如下所示：</p>
-<p><img alt="volatile重排序规则" data-src="volatilebarrier.png"></p>
+<p><img alt="volatile重排序规则" data-src="volatileguize.png"></p>
 <p>使用 volatile 修饰变量时，根据 volatile 重排序规则表，Java 编译器在生成字节码时，会在指令序列中插入内存屏障指令来禁止特定类型的处理器重排序。</p>
 <p><code>内存屏障</code>是一组处理器指令，它的作用是禁止指令重排序和解决内存可见性的问题。</p>
 <p>JMM 把内存屏障指令分为下列四类：</p>
@@ -247,7 +250,7 @@
 <p>StoreLoad 屏障是一个全能型的屏障，它同时具有其他三个屏障的效果。所以执行该屏障开销会很大，因为它使处理器要把缓存中的数据全部刷新到内存中。</p>
 </blockquote>
 <p>下面我们来看看 volatile  读 / 写时是如何插入内存屏障的，见下图：</p>
-<p><img alt="内存屏障" data-src="barrier.png"></p>
+<p><img alt="内存屏障" data-src="volatilebarrier.png"></p>
 <p>从上图，我们可以知道 volatile 读 / 写插入内存屏障规则：</p>
 <ul>
 <li>在每个 volatile 读操作的后面插入 LoadLoad 屏障和 LoadStore 屏障。</li>
