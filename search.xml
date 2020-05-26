@@ -844,8 +844,9 @@
 <p><img alt="集群发现" data-src="discovery-info.png"></p>
 <p>意思是，集群发现(Discovery)有关的配置主要使用 <code>discovery.seed_hosts</code> 和 <code>cluster.initial_master_nodes</code> 完成。</p>
 <p>像 <code>discovery.zen.ping.unicast.hosts</code> 可能是 ElaticSearch 低版本中使用。</p>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html" target="_blank" rel="noopener">ElaticSearch 官方文档</a></p>
-<p><a href="https://www.jianshu.com/p/149a8da90bbc" target="_blank" rel="noopener">ElaticSearch 集群搭建及参数详解</a></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html" target="_blank" rel="noopener">ElasticSearch 官方文档</a></p>
+<p><a href="https://www.jianshu.com/p/149a8da90bbc" target="_blank" rel="noopener">ElasticSearch 集群搭建及参数详解</a></p>
+<p><a href="https://kalasearch.cn/blog/elasticsearch-tutorial/" target="_blank" rel="noopener">ElasticSearch 教程</a></p>
 ]]></content>
       <categories>
         <category>系统安装</category>
